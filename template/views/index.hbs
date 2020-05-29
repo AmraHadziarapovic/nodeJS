@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel = "stylesheet" href="/css/styles.css"> 
+    </head>
+    <body>
+
+        <div class="main-content">
+            <!--Everything but footer is in this div to make it stick to the bottom of the pages -->
+            {{>header}}
+
+            <p>Created by: {{name}}</p>
+        <form>
+            <input placeholder="Location">
+            <button>S3earch</button>
+        </form>
+
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+        </div>
+
+        {{>footer}}
+    
+    <script src = "/js/app.js"></script>
+    </body>
+</html>
