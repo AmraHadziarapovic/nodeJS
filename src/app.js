@@ -8,6 +8,8 @@ const forecast = require('./utils/forecast')
 
 
 const app = express()
+//using dynamically set port by HEROKU or default port when app is run locally
+const port = process.env.PORT || 3000
 
 //Defining paths for Express configuration
 const publicPath = path.join(__dirname , '../public')
@@ -101,8 +103,8 @@ app.get('*', (req,res) => {
 })
 
 //starts the server
-app.listen(3000, () => {
+app.listen(port, () => {
     //async process
-    console.log('Server is up on port 3000!') 
+    console.log('Server is up on port !' + port) 
 
 })
